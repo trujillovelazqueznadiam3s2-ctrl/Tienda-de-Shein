@@ -1,0 +1,38 @@
+{
+  "personalInformation": {
+    "firstName": "Samantha",
+    "lastName": "Garcia Pulido",
+    "address": "Lomas de san Marcial",
+    "age": 16,
+    "dateOfBirth": "2009-09-09",
+    "hobbies": [
+      "Reading",”Freefire” 
+      "Playing soccer",
+      "Coding"
+    ],
+    "friends": [
+      "firstName": "Nadia",
+    "lastName": "Trujillo Velazquez",
+    "address": "Homex",
+    "age": 16,
+    "dateOfBirth": "2009-12-22",
+    "hobbies": "roblox",[
+    ],
+    "friends": [
+      "firstName": "Barbara",
+    "lastName": "Gomez Coria ",
+    "address": "Palomar",
+    "age": 16,
+    "dateOfBirth": "2009-12-12",
+    "hobbies": "free fire",[
+    ],
+    "friends": [
+      "firstName": "Guillermo",
+    "lastName": "Gil Guzman",
+    "address": "Jardinez de la cruz",
+    "age": 16,
+    "dateOfBirth": "2009-10-30",
+    "hobbies": "gym",[
+    ]
+
+{ 
