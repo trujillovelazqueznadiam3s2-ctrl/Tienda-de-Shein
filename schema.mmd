@@ -1,43 +1,83 @@
+```mermaid
 erDiagram
 
-    FORMULARIO ||--o{ ITEM : incluye
-    ITEM ||--o{ ALTERNATIVA : ofrece
-    FORMULARIO ||--o{ PARTICIPACION : genera
-    PARTICIPACION ||--o{ SELECCION : registra
-    ITEM ||--o{ SELECCION : corresponde
+    USUARIO ||--o{ DIRECCION : tiene
+    USUARIO ||--o{ PEDIDO : realiza
+    PEDIDO ||--o{ DETALLE_PEDIDO : contiene
+    PRODUCTO ||--o{ DETALLE_PEDIDO : incluye
+    CATEGORIA ||--o{ PRODUCTO : clasifica
+    PRODUCTO ||--o{ INVENTARIO : tiene
+    PEDIDO ||--|| PAGO : genera
+    PEDIDO ||--|| ENVIO : incluye
+    DIRECCION ||--o{ ENVIO : destino
 
-    FORMULARIO {
-        string formulario_id PK
+    USUARIO {
+        string usuario_id PK
         string nombre
-        string tema_principal
-        string audiencia
-        boolean disponible
+        string email
+        string password
+        string telefono
     }
 
-    ITEM {
-        string item_id PK
-        string pregunta_texto
-        string formato
-        boolean requerido
-        string formulario_id FK
+    DIRECCION {
+        string direccion_id PK
+        string usuario_id FK
+        string calle
+        string ciudad
+        string estado
+        string codigo_postal
     }
 
-    ALTERNATIVA {
-        string alternativa_id PK
+    PRODUCTO {
+        string producto_id PK
+        string nombre
         string descripcion
-        string item_id FK
+        float precio
+        string categoria_id FK
     }
 
-    PARTICIPACION {
-        string participacion_id PK
-        string usuario
+    CATEGORIA {
+        string categoria_id PK
+        string nombre
+    }
+
+    INVENTARIO {
+        string inventario_id PK
+        string producto_id FK
+        string talla
+        string color
+        int stock
+    }
+
+    PEDIDO {
+        string pedido_id PK
+        string usuario_id FK
+        date fecha
+        float total
+        string estado
+    }
+
+    DETALLE_PEDIDO {
+        string detalle_id PK
+        string pedido_id FK
+        string producto_id FK
+        int cantidad
+        float precio_unitario
+    }
+
+    PAGO {
+        string pago_id PK
+        string pedido_id FK
+        string metodo_pago
+        string estado
+    }
+
+    ENVIO {
+        string envio_id PK
+        string pedido_id FK
+        string direccion_id FK
+        string tipo_envio
+        string estado
         date fecha_envio
-        string formulario_id FK
     }
-
-    SELECCION {
-        string seleccion_id PK
-        string respuesta_marcada
-        string item_id FK
-        string participacion_id FK
-    }
+```
