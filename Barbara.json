@@ -1,0 +1,37 @@
+{
+  "personalInformation": {
+    "firstName": "Barbara Guadalupe",
+    "lastName": "Gomez Coria",
+    "address": "calle 27 bis",
+    "age": 16,
+    "dateOfBirth": "2009-12-12",
+    "hobbies": [
+      "Reading",
+      "Playing voley",
+    ],
+    "friends": [
+      "firstName": "samantha michell",
+    "lastName": "garcia pulido",
+    "address": "El diamante",
+    "age": 16,
+    "dateOfBirth": "2009-02-12",
+    "hobbies": "dessert",[
+    ],
+    "friends": [
+      "firstName": "jose antonio",
+    "lastName": "muñoz guzman",
+    "address": "Aguillon",
+    "age": 7,
+    "dateOfBirth": "2019-05-2",
+    "hobbies": "sports",[
+    ],
+    "friends": [
+      "firstName": "itzel",
+    "lastName": "trujillo velasquez",
+    "address": "buena vista",
+    "age": 16,
+    "dateOfBirth": "2009-09-26",
+    "hobbies": "jugar roblox",[
+    ]
+
+{
